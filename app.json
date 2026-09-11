@@ -5,10 +5,14 @@
     "version": "0.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#0A0E27"
+      "resizeMode": "cover",
+      "backgroundColor": "#000000"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
       "**/*"
@@ -20,7 +24,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#0A0E27"
+        "backgroundColor": "#000000"
       },
       "package": "com.roveli.app"
     },
@@ -31,15 +35,16 @@
       [
         "expo-camera",
         {
-          "cameraPermission": "Allow ROVELI to access your camera"
+          "cameraPermission": "Allow ROVELI to access your camera",
+          "microphonePermission": "Allow ROVELI to access your microphone"
         }
       ],
       [
         "expo-media-library",
         {
           "photosPermission": "Allow ROVELI to access your photos",
-          "savePhotosPermission": "Allow ROVELI to save photos",
-          "isAccessMediaLocationEnabled": true
+          "savePhotosPermission": "Allow ROVELI to save photos to your library",
+          "videoPermission": "Allow ROVELI to access your videos"
         }
       ],
       [
@@ -49,6 +54,7 @@
           "color": "#FF5722"
         }
       ]
-    ]
+    ],
+    "scheme": "roveli"
   }
 }
