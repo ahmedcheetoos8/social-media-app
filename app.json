@@ -1,60 +1,24 @@
 {
   "expo": {
-    "name": "ROVELI",
-    "slug": "roveli",
-    "version": "0.1.0",
+    "name": "bolt-expo-nativewind",
+    "slug": "bolt-expo-nativewind",
+    "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "dark",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "cover",
-      "backgroundColor": "#000000"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
     "ios": {
-      "supportsTabletMode": false,
-      "bundleIdentifier": "com.roveli.app"
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#000000"
-      },
-      "package": "com.roveli.app"
+      "supportsTablet": true
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/images/favicon.png"
     },
-    "plugins": [
-      [
-        "expo-camera",
-        {
-          "cameraPermission": "Allow ROVELI to access your camera",
-          "microphonePermission": "Allow ROVELI to access your microphone"
-        }
-      ],
-      [
-        "expo-media-library",
-        {
-          "photosPermission": "Allow ROVELI to access your photos",
-          "savePhotosPermission": "Allow ROVELI to save photos to your library",
-          "videoPermission": "Allow ROVELI to access your videos"
-        }
-      ],
-      [
-        "expo-notifications",
-        {
-          "icon": "./assets/notification-icon.png",
-          "color": "#FF5722"
-        }
-      ]
-    ],
-    "scheme": "roveli"
+    "plugins": ["expo-router", "expo-font", "expo-web-browser"],
+    "experiments": {
+      "typedRoutes": true
+    }
   }
 }
